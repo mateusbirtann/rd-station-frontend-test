@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import { Darker_Grotesque, Nunito_Sans } from "next/font/google";
-import { Head } from "next/document";
 
 const darkerGrotesque = Darker_Grotesque({
   subsets: ["latin"],

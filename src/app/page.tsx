@@ -210,9 +210,9 @@ e mais clientes para sua empresa"
           </div>
         </div>
         <div className="grid grid-cols-2 xl:grid-cols-5 xl:gap-x-4 xl:gap-y-6 gap-y-10 xl:h-[160px]">
-          {integrationsData.map((integration) => {
+          {integrationsData.map((integration, index) => {
             return (
-              <div className="flex flex-col items-center gap-2 h-[68px]">
+              <div key={index} className="flex flex-col items-center gap-2 h-[68px]">
                 <Image
                   width={40}
                   height={40}
