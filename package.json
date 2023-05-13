@@ -9,17 +9,36 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.0",
+    "@react-spring/web": "^9.7.2",
     "@types/node": "20.1.0",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
+    "lucide-react": "^0.214.0",
     "next": "13.4.1",
     "postcss": "8.4.23",
-    "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.9",
+    "react-input-mask": "^2.0.4",
+    "react-responsive-carousel": "^3.2.23",
+    "react-responsive-modal": "^6.4.1",
+    "react-slick": "^0.29.0",
+    "react-swipe": "^6.0.4",
+    "react-swipeable": "^7.0.0",
+    "react-text-mask": "^5.5.0",
+    "react-youtube": "^10.1.0",
+    "swipe-js-iso": "^2.1.5",
     "tailwindcss": "3.3.2",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/react-input-mask": "^3.0.2",
+    "@types/react-slick": "^0.23.10",
+    "@types/react-swipe": "^6.0.2",
+    "@types/react-text-mask": "^5.4.11"
   }
 }

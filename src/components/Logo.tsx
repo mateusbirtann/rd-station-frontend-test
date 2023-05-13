@@ -1,4 +1,5 @@
 // components/Logo.tsx
+import Image from "next/image";
 import React from "react";
 
 type LogoProps = {
@@ -7,11 +8,17 @@ type LogoProps = {
 };
 
 const Logo: React.FC<LogoProps> = ({ variant = "default", className }) => {
-  const logoPath = variant === "bw" ? "/logo-bw.svg" : "/logo-default.svg";
+  const logoPath = variant === "bw" ? "/logo-bw.svg" : "/logo-default.png";
 
   return (
     <div className={`flex items-center ${className}`}>
-      <img src={logoPath} alt="Logo" className="w-auto h-12" />
+      <Image
+        src={logoPath}
+        alt="RD Station logo"
+        className="w-44 h-8"
+        width={522}
+        height={96}
+      />
     </div>
   );
 };

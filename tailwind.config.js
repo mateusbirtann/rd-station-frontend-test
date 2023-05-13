@@ -15,6 +15,7 @@ module.exports = {
         "secondary-50": "#FFFFFF",
         "highlight-600": "#F2BF4E",
         "highlight-500": "#F4CA6D",
+        'gray-lighter': '#CFD3D8',
       },
       width: {
         "sm": "94px",
@@ -23,10 +24,6 @@ module.exports = {
       height: {
         "sm": "40px",
         "md": "44px"
-      },
-      fontFamily: {
-        'nunito-sans': ['Nunito Sans', 'sans-serif'],
-        'darker-grotesque': ['Darker Grotesque', 'sans-serif'],
       },
       fontSize: {
         'desktop-heading-lg': '56px',
@@ -37,12 +34,14 @@ module.exports = {
         'mobile-heading-sm': '24px',
         'desktop-heading-xs': '24px',
         'mobile-heading-xs': '20px',
+        'desktop-subtitle-md': '18px',
+        'mobile-subtitle-md': '16px',
         'desktop-subtitle-sm': '20px',
         'mobile-subtitle-sm': '16px',
         'desktop-subtitle-xs': '14px',
         'mobile-subtitle-xs': '14px',
         'desktop-body-lg': '20px',
-        'mobile-body-lg': '20px',
+        'mobile-body-lg': '16px',
         'desktop-body-md': '16px',
         'mobile-body-md': '16px',
         'desktop-body-sm': '14px',
@@ -62,7 +61,8 @@ module.exports = {
         'bold': '700',
       },
       screens: {
-        "xs": "360px"
+        "xs": "360px",
+        "xl": "1440px"
       },
       backgroundColor: {
         'blue-dark': '#0B485B',
@@ -92,6 +92,20 @@ module.exports = {
         'gray-lightest': '#F1F3F5',
         'white': '#FFFFFF',
       },
+      padding: {
+        "container": "6.75rem"
+      },
+      boxShadow: {
+        'input': 'inset 4px 4px #e3f7f8'
+      },
+      fontFamily: {
+        'darker': ['var(--font-darker-grotesque)'],
+        'nunito': ['var(--font-nunito-sans)'],
+      },
+      backgroundImage: {
+        "cta": "url('/cta.png')",
+        "cta-mobile": "url('/cta-mobile.png')"
+      }
     },
   },
   plugins: [],
