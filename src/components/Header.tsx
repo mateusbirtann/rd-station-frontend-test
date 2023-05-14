@@ -1,6 +1,7 @@
 import Logo from "@/components/Logo";
 import MobileNavMenu from "@/components/MobileNavMenu";
 import DesktopNavMenu from "@/components/DesktopNavMenu";
+import navMenuData from "@/data/navMenuData";
 
 const Header = () => {
   return (
@@ -8,10 +9,10 @@ const Header = () => {
       <div className="flex relative h-full justify-between items-center bg-white max-w-[1224px] mx-auto w-full xs:w-[328px] xl:w-full px-4 xs:p-0">
         <Logo />
         <div className="xl:hidden">
-          <MobileNavMenu />
+          <MobileNavMenu menuData={navMenuData} />
         </div>
         <div className="hidden xl:block">
-          <DesktopNavMenu />
+          <DesktopNavMenu menuData={navMenuData} />
         </div>
       </div>
     </div>

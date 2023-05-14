@@ -1,9 +1,9 @@
-import HeroFormSection from "@/features/HeroFormSection/HeroFormSection";
-import ProductFeaturesListSection from "@/features/ProductFeaturesListSection/ProductFeaturesListSection";
-import ProductBenefitsCardsSection from "@/features/ProductBenefitsCardsSection/ProductBenefitsCardsSection";
-import CreateAccountCTASection from "@/features/CreateAccountCTASection/CreateAccountCTASection";
-import VideoDemoSection from "@/features/VideoDemoSection/VideoDemoSection";
-import MarketingIntegrationCTASection from "@/features/MarketingIntegrationCTASection/MarketingIntegrationCTASection";
+import HeroFormSection from "@/features/HeroFormSection";
+import ProductFeaturesListSection from "@/features/ProductFeaturesListSection";
+import ProductBenefitsCardsSection from "@/features/ProductBenefitsCardsSection";
+import CreateAccountCTASection from "@/features/CreateAccountCTASection";
+import VideoDemoSection from "@/features/VideoDemoSection";
+import MarketingIntegrationCTASection from "@/features/MarketingIntegrationCTASection";
 
 export default function Page() {
   return (

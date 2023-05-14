@@ -36,7 +36,7 @@
 
 @media screen and (max-width: 767px) {
   .bg-triangle-sm {
-    border-width: 0rem 4rem 4rem 0rem;
+    border-width: 0rem 4rem 4rem 0rem !important;
   }
 }
 
