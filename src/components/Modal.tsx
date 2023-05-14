@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import YouTube from 'react-youtube';
 import Image from 'next/image';
+import useWindowSize from "@/hooks/useWindowSize"
 
 type ModalProps = {
   className?: string;
@@ -10,10 +11,14 @@ type ModalProps = {
 
 const Modal = ({ className }: ModalProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const windowSize = useWindowSize();
+
+  const width = windowSize.width ?? 640;
+  const height = windowSize.height ?? 390;
 
   const opts = {
-    height: '390',
-    width: '640',
+    height: height > 640 ? '390' : '200',
+    width: width > 640 ? '640' : '320',
     playerVars: {
       autoplay: 1 as 1,
     },
@@ -52,13 +57,13 @@ const Modal = ({ className }: ModalProps) => {
               <div className="flex justify-center bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <YouTube videoId="eiiU-Fky18s" opts={opts} />
               </div>
-              <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <div className="flex justify-center bg-gray-50 px-4 py-3 sm:px-6">
                 <button
                   type="button"
                   className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                   onClick={closeModal}
                 >
-                  Close
+                  Fechar video
                 </button>
               </div>
             </div>

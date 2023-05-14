@@ -18,13 +18,13 @@ const CreateAccountCTASection = () => {
           >
             Combinamos nossos produtos de Marketing e Vendas com pessoas que se
             importam com seus resultados e um ecossistema que apoia o seu
-            negócio do planejamento à prática.
+            negócio do planejamento à prática. 
           </Typography>
         </div>
         <Button
           type="highlight"
           size="custom"
-          className="w-full xs:w-[215px] xl:w-[257px] h-10 mt-8 xl:mt-10 text-sm xl:text-base"
+          className="w-full h-10 mt-6 xs:w-[215px] text-sm xl:text-base xl:w-[257px]"
         >
           CRIAR CONTA GRATUITA
         </Button>

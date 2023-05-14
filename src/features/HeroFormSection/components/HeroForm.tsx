@@ -1,7 +1,7 @@
 import Form from "@/components/Form";
 import Typography from "@/components/Typography";
 
-const CreateAccountForm = () => (
+const HeroForm = () => (
   <div className="mt-10 z-10 w-full xl:w-[496px] bg-white relative shadow-[0px_4px_12px_rgba(33,36,41,0.14)] rounded-sm px-6 py-10 xs:w-[328px]">
     <div className="flex flex-col gap-4">
       <Typography variant="heading-xs" className="text-center">
@@ -18,4 +18,4 @@ const CreateAccountForm = () => (
   </div>
 );
 
-export default CreateAccountForm;
+export default HeroForm;

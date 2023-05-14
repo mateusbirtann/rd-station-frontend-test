@@ -1,7 +1,7 @@
 import HeroHeader from "./components/HeroHeader";
 import HeroBottom from "./components/HeroBottom";
 import { HeroBottomProps, HeroHeaderProps } from "@/types";
-import CreateAccountForm from "./components/CreateAccountForm";
+import HeroForm from "./components/HeroForm";
 
 const HeroFormSection = () => {
   const headerContent: HeroHeaderProps = {
@@ -31,7 +31,7 @@ const HeroFormSection = () => {
             title={headerContent.title}
             description={headerContent.description}
           />
-          <CreateAccountForm />
+          <HeroForm />
         </div>
         <HeroBottom
           title={bottomContent.title}
