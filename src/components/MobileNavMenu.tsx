@@ -102,7 +102,7 @@ const MobileNavMenu = () => {
       {isMenuOpen && (
         <animated.div
           style={menuAnimation}
-          className="absolute w-full left-0 top-19 px-4 sm:px-container shadow-lg bg-white z-30"
+          className="absolute w-full left-0 top-20 px-4 shadow-lg bg-white z-30"
         >
           {(NavMenuData as NavMenuData).map((item, index) => (
             <div key={index}>

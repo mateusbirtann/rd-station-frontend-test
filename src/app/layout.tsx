@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import { Darker_Grotesque, Nunito_Sans } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const darkerGrotesque = Darker_Grotesque({
   subsets: ["latin"],
@@ -29,12 +30,10 @@ export default function RootLayout({
       lang="en"
       className={`${darkerGrotesque.variable} ${nunitoSans.variable}`}
     >
-      <body className="h-screen m-auto">
+      <body>
         <Header />
-        <div className="flex justify-end">
-          <div className="bg-triangle rotate-180"></div>
-        </div>
         {children}
+        <Footer />
       </body>
     </html>
   );
