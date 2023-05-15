@@ -43,6 +43,7 @@ const PasswordInput = ({
         />
         <button
           type="button"
+          aria-label="mostrar ou ocultar senha"
           onClick={() => setShowPassword(!showPassword)}
           className="absolute inset-y-0 right-0 pr-2"
         >

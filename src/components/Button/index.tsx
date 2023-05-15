@@ -17,22 +17,22 @@ const Button = ({
 }: ButtonProps) => {
   const buttonStyles = {
     primary: {
-      bgColor: "bg-primary-600",
-      hoverBgColor: "hover:bg-primary-500",
+      bgColor: "bg-cyan",
+      hoverBgColor: "hover:bg-cyan-light",
       defaultSize: "w-sm h-sm",
       shadowSize: "w-sm h-1",
       border: "border-none",
     },
     secondary: {
-      bgColor: "bg-secondary-50",
-      hoverBgColor: "hover:bg-secondary-500",
+      bgColor: "bg-white",
+      hoverBgColor: "hover:bg-[#D6D6D6]",
       defaultSize: "w-sm h-sm",
       shadowSize: "w-sm h-2",
       border: "border-[3px] border-black",
     },
     highlight: {
-      bgColor: "bg-highlight-600",
-      hoverBgColor: "hover:bg-highlight-500",
+      bgColor: "bg-yellow",
+      hoverBgColor: "hover:bg-yellow-light",
       defaultSize: "w-md h-md",
       shadowSize: "w-md h-1",
       border: "border-none",

@@ -117,7 +117,7 @@ const Formulario: React.FC = () => {
                     type="radio"
                     value="yes"
                     className={`border h-4 w-4 appearance-none rounded-full ${
-                      hasWebsite ? "border-4 border-primary-600 bg-black" : ""
+                      hasWebsite ? "border-4 border-[#19C1CE] bg-black" : ""
                     }`}
                   />
                   Meu site é
@@ -154,7 +154,7 @@ const Formulario: React.FC = () => {
                     type="radio"
                     value="no"
                     checked={field.value === "no"}
-                    className="border border-zinc-500 checked:border-4 checked:border-primary-600 checked:bg-black h-4 w-4 appearance-none rounded-full"
+                    className="border border-zinc-500 checked:border-4 checked:border-[#19C1CE] checked:bg-black h-4 w-4 appearance-none rounded-full"
                   />
                   Ainda não tenho site
                 </label>

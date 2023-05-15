@@ -8,5 +8,7 @@ const customJestConfig = {
   },
   moduleDirectories: ["node_modules", "<rootDir>/"],
   testEnvironment: "jest-environment-jsdom",
+  collectCoverage: true,
+  coverageReporters: ["text", "lcov"],
 };
 module.exports = createJestConfig(customJestConfig);

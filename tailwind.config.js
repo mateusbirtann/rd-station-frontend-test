@@ -4,19 +4,23 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    './src/features/**/*.{js,ts,tsx,mdx}'
+    './src/sections/**/*.{js,ts,tsx,mdx}'
   ],
   theme: {
     extend: {
       colors: {
-        "primary-900": "#0B485B",
-        "primary-600": "#19C1CE",
-        "primary-500": "#07E5EB",
-        "secondary-500": "#D6D6D6",
-        "secondary-50": "#FFFFFF",
-        "highlight-600": "#F2BF4E",
-        "highlight-500": "#F4CA6D",
+        'blue-dark': '#0B485B',
+        'cyan': '#19C1CE',
+        'cyan-light': '#07E5EB',
+        'yellow': '#F2BF4E',
+        'yellow-light': '#F4CA6D',
+        'black': '#000000',
+        'gray-dark': '#212429',
+        'gray': '#7E8A98',
+        'gray-light': '#97A1AC',
         'gray-lighter': '#CFD3D8',
+        'gray-lightest': '#F1F3F5',
+        'white': '#FFFFFF',
       },
       width: {
         "sm": "94px",

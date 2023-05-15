@@ -1,4 +1,3 @@
-// components/Logo.test.tsx
 import { render } from "@testing-library/react";
 import Logo from "./index";
 import "@testing-library/jest-dom";

@@ -1,5 +1,5 @@
 import Typography from "@/components/Typography";
-import benefitsCardsData from "@/data/BenefitsCardsData";
+import benefitsCardsData from "@/data/benefitsCardsData";
 import Slider from '@/components/Slider';
 import BenefitCard from "./components/BenefitCard";
 

@@ -6,6 +6,8 @@ import Typography from "@/components/Typography";
 import { useSpring, animated } from "@react-spring/web";
 import AccordionNavMenu from "./AccordionNavMenu";
 import { NavMenuProps } from "@/types";
+import Button from "@/components/Button";
+import Image from "next/image"
 
 interface MobileNavMenuProps {
   menuData: NavMenuProps[];
@@ -30,7 +32,8 @@ const MobileNavMenu = ({ menuData }: MobileNavMenuProps) => {
     <div>
       <button
         onClick={onMenuToggle}
-        className="rounded-full w-[35px] h-[35px] flex justify-center items-center"
+        aria-label="mostrar menu"
+        className="rounded-full w-[35px] h-[35px] flex justify-center items-center text-cyan"
       >
         <Menu />
       </button>
@@ -43,7 +46,7 @@ const MobileNavMenu = ({ menuData }: MobileNavMenuProps) => {
           {menuData.map((item, index) => (
             <div key={index}>
               {!item.content ? (
-                <div className="flex border-b-gray-300 border-b py-4 outline-none cursor-pointer">
+                <div className="flex border-b-gray-lighter border-b py-4 outline-none cursor-pointer">
                   <Typography variant="body-md" className="font-bold">
                     {item.title}
                   </Typography>
@@ -57,6 +60,24 @@ const MobileNavMenu = ({ menuData }: MobileNavMenuProps) => {
               )}
             </div>
           ))}
+      <div className="flex gap-2 justify-center my-4">
+        <Button type="secondary">BUTTON</Button>
+        <Button
+          size={"custom"}
+          className="h-10 w-[122px]"
+          icon={
+            <Image
+              src="/arrow-right.svg"
+              className="w-6 h-6"
+              alt="arrow-right"
+              width={20}
+              height={20}
+            />
+          }
+        >
+          BUTTON
+        </Button>
+      </div>
         </animated.div>
       )}
     </div>

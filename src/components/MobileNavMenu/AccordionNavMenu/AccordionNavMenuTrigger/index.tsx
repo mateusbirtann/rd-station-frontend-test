@@ -20,7 +20,7 @@ const AccordionNavMenuTrigger = ({
 }: AccordionNavMenuTriggerProps) => {
   return (
     <div onClick={onToggle}>
-      <div className="group flex w-full border-b-gray-300 border-b py-4 outline-none cursor-pointer">
+      <div className="group flex w-full border-b-gray-lighter border-b py-4 outline-none cursor-pointer">
         <div className="flex w-full justify-between items-center gap-1">
           <Typography variant="body-md" className="font-bold">
             {item.title}

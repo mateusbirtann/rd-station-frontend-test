@@ -1,6 +1,6 @@
 {
   "name": "rd-station-frontend-test",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -23,17 +23,10 @@
     "postcss": "8.4.23",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
-    "react-input-mask": "^2.0.4",
     "react-markdown": "^8.0.7",
     "react-responsive-carousel": "^3.2.23",
-    "react-responsive-modal": "^6.4.1",
-    "react-slick": "^0.29.0",
-    "react-swipe": "^6.0.4",
-    "react-swipeable": "^7.0.0",
-    "react-text-mask": "^5.5.0",
     "react-youtube": "^10.1.0",
     "rehype-raw": "^6.1.1",
-    "swipe-js-iso": "^2.1.5",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4",
     "zod": "^3.21.4"
@@ -41,10 +34,6 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
-    "@types/react-input-mask": "^3.0.2",
-    "@types/react-slick": "^0.23.10",
-    "@types/react-swipe": "^6.0.2",
-    "@types/react-text-mask": "^5.4.11",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0"
   }
