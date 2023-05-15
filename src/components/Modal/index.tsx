@@ -1,16 +1,17 @@
 'use client'
 
-import React, { useState } from 'react';
+import React from 'react';
 import YouTube from 'react-youtube';
 import Image from 'next/image';
 import useWindowSize from "@/hooks/useWindowSize"
 
 type ModalProps = {
   className?: string;
+  isOpen: boolean;
+  setIsOpen: (open: boolean) => void;
 };
 
-const Modal = ({ className }: ModalProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Modal = ({ className, isOpen, setIsOpen }: ModalProps) => {
   const windowSize = useWindowSize();
 
   const width = windowSize.width ?? 640;

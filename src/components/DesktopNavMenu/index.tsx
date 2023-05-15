@@ -6,7 +6,7 @@ import Button from "@/components/Button";
 import NavMenuTrigger from "./NavMenuTrigger";
 import NavMenuContent from "./NavMenuContent";
 import { NavMenuProps } from "@/types";
-
+import Image from "next/image";
 interface DesktopNavMenuProps {
   menuData: NavMenuProps[];
 }
@@ -34,7 +34,21 @@ const DesktopNavMenu = ({ menuData }: DesktopNavMenuProps) => {
       </ul>
       <div className="flex gap-2">
         <Button type="secondary">BUTTON</Button>
-        <Button>BUTTON</Button>
+        <Button
+          size={"custom"}
+          className="h-10 w-[122px]"
+          icon={
+            <Image
+              src="/arrow-right.svg"
+              className="w-6 h-6"
+              alt="arrow-right"
+              width={20}
+              height={20}
+            />
+          }
+        >
+          BUTTON
+        </Button>
       </div>
     </nav>
   );

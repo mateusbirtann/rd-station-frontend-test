@@ -15,7 +15,7 @@ const MarketingIntegrationCTASection: React.FC = () => {
           O RD Station Marketing se conecta as principais ferramentas nacionais
           e internacionais
         </Typography>
-        <div className="flex justify-center xl:justify-start">
+        <div className="hidden xl:block flex justify-center xl:justify-start">
           <Button type="primary" size="custom" className="w-[257px] h-10">
             <a
               href="https://app.rdstation.com.br/signup"
@@ -38,6 +38,17 @@ const MarketingIntegrationCTASection: React.FC = () => {
           )
         )}
       </div>
+      <div className="xl:hidden flex justify-center xl:justify-start">
+          <Button type="primary" size="custom" className="w-[257px] h-10">
+            <a
+              href="https://app.rdstation.com.br/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CRIAR CONTA GRATUITA
+            </a>
+          </Button>
+        </div>
     </div>
   );
 };
