@@ -94,6 +94,14 @@ As seguintes ferramentas foram usadas na construção do projeto, incluindo test
 -   **[React Markdown](https://react-hook-form.com/)** - Permite renderizar markdown como componentes React.
 -   **[React Resposive Caroulsel](https://www.npmjs.com/package/react-responsive-carousel)** - Componente carrossel responsivo para React.
 
+## ⚡ Performance
 
+Utilizando a ferramenta [Lighthouse](https://developers.google.com/web/tools/lighthouse), podemos avaliar e melhorar a qualidade da nossa aplicação web. O Lighthouse é uma ferramenta open-source automatizada que audita a performance, acessibilidade, práticas progressivas da web, SEO e mais.
 
+Aqui estão os resultados do Lighthouse na última versão do projeto:
 
+### Desktop
+![Lighthouse Desktop Score](./public/lighthouse-desktop-score.JPG)
+
+### Mobile
+![Lighthouse Mobile Score](./public/lighthouse-mobile-score.JPG)

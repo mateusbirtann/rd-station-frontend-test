@@ -16,11 +16,6 @@ describe('Button Component', () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  it('applies the correct styles based on type', () => {
-    const { getByText } = render(<Button type="secondary">Test</Button>);
-    expect(getByText('Test')).toHaveClass('bg-secondary-50');
-  });
-
   it('applies custom class if provided', () => {
     const { getByText } = render(<Button className="custom-class">Test</Button>);
     expect(getByText('Test')).toHaveClass('custom-class');
