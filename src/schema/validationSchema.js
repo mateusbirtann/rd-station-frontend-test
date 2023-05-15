@@ -1,11 +1,10 @@
-// validationSchema.js
 import { z } from "zod";
 
 export const schema = z
   .object({
     name: z.string().nonempty({ message: "O campo nome é obrigatório" }),
     email: z.string().email({ message: "Deve ser um email válido" }),
-    phone: z.string(),
+    phone: z.string().nonempty({ message: "O campo telefone é obrigatório" }),
     jobPosition: z.string().nonempty({ message: "O campo cargo é obrigatório" }),
     password: z
       .string()
@@ -20,15 +19,20 @@ export const schema = z
       .refine((value) => /\d/.test(value), {
         message: "Deve conter pelo menos um número",
       }),
-    site: z.string().url({ message: "Deve ser uma URL válida" }),
+    site: z.string(),
     confirmPassword: z.string().nonempty({ message: "O campo confirme sua senha é obrigatório" }),
     hasWebsite: z.enum(["yes", "no"]),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords don't match",
+    message: "A senhas devem ser iguais",
     path: ["confirmPassword"],
   })
-  .refine((data) => (data.hasWebsite ? data.site : true), {
+  .refine((data) => {
+    if (data.hasWebsite === "yes") {
+      return data.site !== "";
+    }
+    return true;
+  }, {
     message: "Campo site é obrigatório",
     path: ["site"],
   });

@@ -2,6 +2,7 @@ import { Controller } from "react-hook-form";
 import { Eye, EyeOff } from "lucide-react";
 
 type PasswordInputProps = {
+  label: string,
   name: string;
   control: any;
   defaultValue: string;
@@ -10,20 +11,21 @@ type PasswordInputProps = {
   errors: any;
 };
 
-const PasswordInput: React.FC<PasswordInputProps> = ({
+const PasswordInput = ({
+  label,
   name,
   control,
   defaultValue,
   showPassword,
   setShowPassword,
   errors,
-}) => {
+}: PasswordInputProps) => {
   const inputClassName =
     "h-10 p-2 border-2 border-black rounded-none shadow-input placeholder:text-slate-400";
 
   return (
     <div className="flex flex-col gap-2">
-      <label className="font-bold text-base font-nunito">Crie uma senha</label>
+      <label className="font-bold text-base font-nunito">{label}</label>
       <div className="relative">
         <Controller
           name={name}

@@ -18,7 +18,7 @@ const CreateAccountCTASection = () => {
           >
             Combinamos nossos produtos de Marketing e Vendas com pessoas que se
             importam com seus resultados e um ecossistema que apoia o seu
-            negócio do planejamento à prática. 
+            negócio do planejamento à prática.
           </Typography>
         </div>
         <Button
@@ -26,7 +26,9 @@ const CreateAccountCTASection = () => {
           size="custom"
           className="w-full h-10 mt-6 xs:w-[215px] text-sm xl:text-base xl:w-[257px]"
         >
-          CRIAR CONTA GRATUITA
+          <a href="https://app.rdstation.com.br/signup" target="_blank" rel="noopener noreferrer">
+            CRIAR CONTA GRATUITA
+          </a>
         </Button>
       </div>
     </div>

@@ -1,6 +1,6 @@
-import Logo from "./Logo";
-import Typography from "./Typography";
-import socialMediaData from "@/data/SocialMediaData";
+import Logo from "@/components/Logo";
+import Typography from "@/components/Typography";
+import socialMediaData from "@/data/socialMediaData";
 import Image from "next/image";
 
 const Footer = () => {

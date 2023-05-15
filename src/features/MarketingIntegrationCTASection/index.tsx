@@ -1,10 +1,8 @@
-// Importações de componentes e dados
-import React from 'react';
 import Button from "@/components/Button";
 import Typography from "@/components/Typography";
 import integrationsData from "@/data/IntegrationsData";
-import IntegrationItem from './components/IntegrationItem';
-import { IntegrationItemProps } from '@/types';
+import IntegrationItem from "./components/IntegrationItem";
+import { IntegrationItemProps } from "@/types";
 
 const MarketingIntegrationCTASection: React.FC = () => {
   return (
@@ -19,14 +17,26 @@ const MarketingIntegrationCTASection: React.FC = () => {
         </Typography>
         <div className="flex justify-center xl:justify-start">
           <Button type="primary" size="custom" className="w-[257px] h-10">
-            CRIAR CONTA GRATUITA
+            <a
+              href="https://app.rdstation.com.br/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CRIAR CONTA GRATUITA
+            </a>
           </Button>
         </div>
       </div>
       <div className="grid grid-cols-2 xl:grid-cols-5 xl:gap-x-4 xl:gap-y-6 gap-y-10 xl:h-[160px]">
-        {integrationsData.map((integration: IntegrationItemProps, index: number) => (
-          <IntegrationItem key={index} icon={integration.icon} text={integration.text} />
-        ))}
+        {integrationsData.map(
+          (integration: IntegrationItemProps, index: number) => (
+            <IntegrationItem
+              key={index}
+              icon={integration.icon}
+              text={integration.text}
+            />
+          )
+        )}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 // components/PhoneInput.tsx
 import React from "react";
-import { Controller, UseFormReturn } from "react-hook-form";
-import normalizeNumber from "@/services/maskNumber";
+import { Controller } from "react-hook-form";
+import maskNumber from "@/services/maskNumber";
 
 type PhoneInputProps = {
   name: string;
@@ -23,7 +23,7 @@ const PhoneInput: React.FC<PhoneInputProps> = ({
 
   const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
-    event.target.value = normalizeNumber(value);
+    event.target.value = maskNumber(value);
     setValue(name, event.target.value);
   };
 

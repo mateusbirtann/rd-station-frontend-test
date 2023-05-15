@@ -3,7 +3,7 @@
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Typography from "./Typography";
+import Typography from "@/components/Typography";
 
 const Slider = (cards: any) => {
   return (

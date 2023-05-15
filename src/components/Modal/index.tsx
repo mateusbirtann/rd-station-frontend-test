@@ -55,7 +55,7 @@ const Modal = ({ className }: ModalProps) => {
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all max-w-[1224px] sm:w-full">
               <div className="flex justify-center bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <YouTube videoId="eiiU-Fky18s" opts={opts} />
+                <YouTube videoId="lGCesaaLi4s" opts={opts} />
               </div>
               <div className="flex justify-center bg-gray-50 px-4 py-3 sm:px-6">
                 <button

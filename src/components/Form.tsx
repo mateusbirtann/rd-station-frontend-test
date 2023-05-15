@@ -5,18 +5,20 @@ import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { schema } from "@/schema/validationSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Button from "./Button";
-import PhoneInput from "./PhoneInput";
-import TextInput from "./TextInput";
-import jobPositionsOptions from "@/data/JobPositionsOptions";
-import SelectInput from "./SelectInput";
-import PasswordInput from "./PassoworInput";
+import Button from "@/components/Button";
+import PhoneInput from "@/components/PhoneInput";
+import TextInput from "@/components/TextInput";
+import jobPositionsOptions from "@/data/jobPositionsOptions";
+import SelectInput from "@/components/SelectInput";
+import PasswordInput from "@/components/PasswordInput";
+import TermsAndConditions from "./TermsAndConditions";
 
 type FormInputs = z.infer<typeof schema>;
 
 const Formulario: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const {
     handleSubmit,
@@ -35,6 +37,7 @@ const Formulario: React.FC = () => {
 
   const onSubmit = (data: FormInputs) => {
     console.log(data);
+    setFormSubmitted(true);
   };
 
   const inputClassName =
@@ -42,139 +45,132 @@ const Formulario: React.FC = () => {
 
   return (
     <div>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        id="formWrapper"
-        className="flex flex-col gap-4"
-      >
-        <TextInput
-          name="name"
-          label="Diga, qual o seu nome?"
-          control={control}
-          errors={errors}
-          placeholder="Insira seu nome"
-        />
-
-        <TextInput
-          name="email"
-          label="Seu email de trabalho"
-          control={control}
-          errors={errors}
-          placeholder="Insira seu e-mail"
-        />
-
-        <PhoneInput
-          name="phone"
-          label="Seu telefone"
-          control={control}
-          setValue={setValue}
-          errors={errors}
-        />
-
-        <SelectInput
-          name="jobPosition"
-          label="Seu cargo de ocupação"
-          control={control}
-          errors={errors}
-          options={jobPositionsOptions}
-        />
-
-        <PasswordInput
-          name="password"
-          control={control}
-          defaultValue=""
-          showPassword={showPassword}
-          setShowPassword={setShowPassword}
-          errors={errors}
-        />
-
-        <PasswordInput
-          name="confirmPassword"
-          control={control}
-          defaultValue=""
-          showPassword={showConfirmPassword}
-          setShowPassword={setShowConfirmPassword}
-          errors={errors}
-        />
-
-        <div className="flex flex-col gap-2">
-          <label className="font-bold text-base font-nunito">
-            Qual o site da sua empresa?
-          </label>
-          <Controller
-            name="hasWebsite"
+      {!formSubmitted ? (
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          id="formWrapper"
+          className="flex flex-col gap-4"
+        >
+          <TextInput
+            name="name"
+            label="Diga, qual o seu nome?"
             control={control}
-            render={({ field }) => (
-              <label className="flex gap-2 items-center">
-                <input
-                  {...field}
-                  type="radio"
-                  value="yes"
-                  className={`border h-4 w-4 appearance-none rounded-full ${
-                    hasWebsite ? "border-4 border-primary-600 bg-black" : ""
-                  }`}
-                />
-                Meu site é
-              </label>
-            )}
+            errors={errors}
+            placeholder="Insira seu nome"
           />
-        </div>
 
-        <div className="flex flex-col gap-2">
-          <Controller
-            name="site"
+          <TextInput
+            name="email"
+            label="Seu email de trabalho"
+            control={control}
+            errors={errors}
+            placeholder="Insira seu e-mail"
+          />
+
+          <PhoneInput
+            name="phone"
+            label="Seu telefone"
+            control={control}
+            setValue={setValue}
+            errors={errors}
+          />
+
+          <SelectInput
+            name="jobPosition"
+            label="Seu cargo de ocupação"
+            control={control}
+            errors={errors}
+            options={jobPositionsOptions}
+          />
+
+          <PasswordInput
+            label="Crie uma senha"
+            name="password"
             control={control}
             defaultValue=""
-            render={({ field }) => (
-              <input
-                {...field}
-                className={`${inputClassName}`}
-                placeholder="Insira o endereço do seu site"
-                disabled={!hasWebsite}
-              />
-            )}
+            showPassword={showPassword}
+            setShowPassword={setShowPassword}
+            errors={errors}
           />
-          {errors.site && <p className="text-red-500">{errors.site.message}</p>}
 
-          <Controller
-            name="hasWebsite"
+          <PasswordInput
+            label="Confirme sua senha"
+            name="confirmPassword"
             control={control}
-            render={({ field }) => (
-              <label className="flex gap-2 items-center">
+            defaultValue=""
+            showPassword={showConfirmPassword}
+            setShowPassword={setShowConfirmPassword}
+            errors={errors}
+          />
+
+          <div className="flex flex-col gap-2">
+            <label className="font-bold text-base font-nunito">
+              Qual o site da sua empresa?
+            </label>
+            <Controller
+              name="hasWebsite"
+              control={control}
+              render={({ field }) => (
+                <label className="flex gap-2 items-center">
+                  <input
+                    {...field}
+                    type="radio"
+                    value="yes"
+                    className={`border h-4 w-4 appearance-none rounded-full ${
+                      hasWebsite ? "border-4 border-primary-600 bg-black" : ""
+                    }`}
+                  />
+                  Meu site é
+                </label>
+              )}
+            />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <Controller
+              name="site"
+              control={control}
+              defaultValue=""
+              render={({ field }) => (
                 <input
                   {...field}
-                  type="radio"
-                  value="no"
-                  checked={field.value === "no"}
-                  className="border border-zinc-500 checked:border-4 checked:border-primary-600 checked:bg-black h-4 w-4 appearance-none rounded-full"
+                  className={`${inputClassName}`}
+                  placeholder="Insira o endereço do seu site"
+                  disabled={!hasWebsite}
                 />
-                Ainda não tenho site
-              </label>
+              )}
+            />
+            {errors.site && (
+              <p className="text-red-500">{errors.site.message}</p>
             )}
-          />
-        </div>
 
-        <div className="flex flex-col gap-2 px-4">
-          <ul className="list-disc text-gray text-xs">
-            <li>
-              Ao criar minha conta estou de acordo com os termos de uso do
-              software e política de privacidade
-            </li>
-            <li>
-              Ao preencher o formulário, concordo em receber comunicações de
-              acordo com meus interesses.
-            </li>
-            <li>
-              *Você pode alterar suas permissões de comunicação a qualquer
-              tempo.
-            </li>
-          </ul>
-        </div>
+            <Controller
+              name="hasWebsite"
+              control={control}
+              render={({ field }) => (
+                <label className="flex gap-2 items-center">
+                  <input
+                    {...field}
+                    type="radio"
+                    value="no"
+                    checked={field.value === "no"}
+                    className="border border-zinc-500 checked:border-4 checked:border-primary-600 checked:bg-black h-4 w-4 appearance-none rounded-full"
+                  />
+                  Ainda não tenho site
+                </label>
+              )}
+            />
+          </div>
 
-        <Button type="highlight" size="custom" className="w-full h-11">
-          CRIAR MINHA CONTA
-        </Button>
-      </form>
+          <TermsAndConditions />
+
+          <Button type="highlight" size="custom" className="w-full h-11">
+            CRIAR MINHA CONTA
+          </Button>
+        </form>
+      ) : (
+        <div className="text-green-500 text-center">Obrigado! Entraremos em contato.</div>
+      )}
     </div>
   );
 };
